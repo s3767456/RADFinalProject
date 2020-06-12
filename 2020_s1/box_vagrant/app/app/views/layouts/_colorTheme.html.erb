@@ -1,0 +1,17 @@
+<div>
+Color Theme<br>
+<button class="button button1" id="black">Black</button> 
+<button class="button button1">Graphite</button>
+<button class="button button1">White</button>
+<br><br>
+<input type="checkbox" id="hoursToggle" name="hoursToggle1" value="True"> 24-Hour Clock
+<div>
+
+<script>
+  $(function(){
+    $('#black').on('click', function(){
+        $(this).toggleClass('btn_red')
+    });
+});
+</script>
+
