@@ -318,7 +318,7 @@ nav .search-container button:hover {
       padding-bottom: 35px;
       padding-right: 30px;
       padding-left:30px;
-      border-bottom: 2px solid blue;
+      border-bottom: 2px solid gray;
       font-size: 20px;
   }
 
@@ -328,5 +328,38 @@ nav .search-container button:hover {
   .btn_red{
     background:green;
 }
+.worldClockBlack {
+    background-color: black;
+    display: inline-block;
+    min-height: 100px;
+    border: 2px solid gray;
+    border-radius: 10px;
+    color:white;
+}
 
+.worldClockGraphite {
+    background-color: gray;
+    display: inline-block;
+    min-height: 100px;
+    border: 2px solid black;
+    border-radius: 10px;
+    color: black;
+    .card-content {
+        border-bottom: 2px solid black;
+    }
+}
+
+.colorOptions {
+    span {
+        padding: 5px;
+        border: 1px solid gray;
+        text-align:center;
+        &:hover {
+            background-color: gray;
+            border: 1px solid black;
+            text-decoration: none;
+        }
+        
+    }
+}
  

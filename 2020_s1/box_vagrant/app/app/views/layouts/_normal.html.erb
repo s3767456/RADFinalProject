@@ -1,0 +1,68 @@
+<div class = "worldClock" id="target" style="width: 550px">
+<div class="card">
+    <div class="card-content">
+    <span style="float:left">Melbourne</span><span style="float:right"> <%= (Time.now + 14*60*60).strftime('%H:%M') %> </span><br>
+    <span style="float:right">
+    <% if ((Time.now + 14*60*60).strftime('%Y-%m-%d') == (Time.now + 14*60*60).strftime('%Y-%m-%d')) %>
+       today 
+    <% elsif ((Time.now + 14*60*60).strftime('%Y-%m-%d') > (Time.now + 14*60*60).strftime('%Y-%m-%d')) %>
+       tomorrow 
+    <% elsif ((Time.now + 14*60*60).strftime('%Y-%m-%d') < (Time.now + 14*60*60).strftime('%Y-%m-%d')) %>
+      yesterday
+    <% end %>
+    <% if (Time.now + 14*60*60).strftime('%H:%M').between?('09:00', '17:59') %>
+    <i class="fas fa-circle" Style="color:green; border:2px solid black; border-radius:50%"></i>
+    <% elsif (Time.now + 14*60*60).strftime('%H:%M').between?("18:00", "19:59") %>
+    <i class="fas fa-circle" Style="color:yellow; border:2px solid black; border-radius:50%"></i>
+    <% elsif ((Time.now + 14*60*60).strftime('%H:%M').between?("08:00", "08:59")) || ((Time.now + 14*60*60).strftime('%H:%M').between?("20:00", "22:59")) %>
+    <i class="fas fa-circle" Style="color:pink; border:2px solid black; border-radius:50%"></i>
+    <% else %>    
+    <i class="fas fa-moon" style="border:none"></i>
+    <% end %></span>
+    </div>
+    <div class="card-content">
+    <span style="float:left">San Francisco</span><span style="float:right"> <%= (Time.now - 3*60*60).strftime('%H:%M') %> </span><br>
+    <span style="float:left"> -17h </span>
+    <span style="float:right">
+    <% if ((Time.now - 3*60*60).strftime('%Y-%m-%d') == (Time.now + 14*60*60).strftime('%Y-%m-%d')) %>
+       today 
+    <% elsif ((Time.now - 3*60*60).strftime('%Y-%m-%d') > (Time.now + 14*60*60).strftime('%Y-%m-%d')) %>
+       tomorrow 
+    <% elsif ((Time.now - 3*60*60).strftime('%Y-%m-%d') < (Time.now + 14*60*60).strftime('%Y-%m-%d')) %>
+       yesterday
+    <% end %>
+    <% if (Time.now - 3*60*60).strftime('%H:%M').between?('09:00', '17:59') %>
+       <i class="fas fa-circle" Style="color:green; border:2px solid black; border-radius:50%"></i>
+    <% elsif (Time.now - 3*60*60).strftime('%H:%M').between?("18:00", "19:59") %>
+       <i class="fas fa-circle" Style="color:yellow; border:2px solid black; border-radius:50%"></i>
+    <% elsif ((Time.now - 3*60*60).strftime('%H:%M').between?("08:00", "08:59")) || ((Time.now - 3*60*60).strftime('%H:%M').between?("20:00", "22:59")) %>
+       <i class="fas fa-circle" Style="color:pink; border:2px solid black; border-radius:50%"></i>
+    <% else %>    
+       <i class="fas fa-moon" style="border:none"></i>
+    <% end %>
+    </span>
+    </div>
+    <div class="card-content">
+    <span style="float:left">Tokyo</span><span style="float:right"> <%= (Time.now + 13*60*60).strftime('%H:%M') %> </span><br>
+    <span style="float:left"> -1h </span>
+    <span style="float:right">
+    <% if ((Time.now + 13*60*60).strftime('%Y-%m-%d') == (Time.now + 14*60*60).strftime('%Y-%m-%d')) %>
+       today 
+    <% elsif ((Time.now + 13*60*60).strftime('%Y-%m-%d') > (Time.now + 14*60*60).strftime('%Y-%m-%d')) %>
+       tomorrow 
+    <% elsif ((Time.now + 13*60*60).strftime('%Y-%m-%d') < (Time.now + 14*60*60).strftime('%Y-%m-%d')) %>
+       yesterday
+    <% end %>
+    <% if (Time.now + 13*60*60).strftime('%H:%M').between?('09:00', '17:59') %>
+       <i class="fas fa-circle" Style="color:green; border:2px solid black; border-radius:50%"></i>
+    <% elsif (Time.now + 13*60*60).strftime('%H:%M').between?("18:00", "19:59") %>
+       <i class="fas fa-circle" Style="color:yellow; border:2px solid black; border-radius:50%"></i>
+    <% elsif ((Time.now + 13*60*60).strftime('%H:%M').between?("08:00", "08:59")) || ((Time.now + 13*60*60).strftime('%H:%M').between?("20:00", "22:59")) %>
+       <i class="fas fa-circle" Style="color:pink; border:2px solid black; border-radius:50%"></i>
+    <% else %>    
+       <i class="fas fa-moon" style="border:none"></i>
+    <% end %></span>
+    </div>
+    <center><i class="fa fa-plus" aria-hidden="true"></i></center>
+</div>
+</div>
